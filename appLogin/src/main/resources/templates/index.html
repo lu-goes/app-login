@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Academia PowerFit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background-color: #111;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    header {
+      background-color: #000;
+      padding: 20px 20px;
+      display: flex;
+      justify-content: space-between;
+	  text-align: center;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      color: #ff0000;
+      font-size: 2rem;
+	  text-align: left;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+	  text-align: center;
+    }
+
+    nav a:hover {
+      color: #ff0000;
+    }
+	
+	.login button{
+		padding: 10px 10px;
+		font-size: 25px;
+		background-color: white;
+		color: #ff0000;
+		text-decoration: none;
+		border-radius: 20px;
+	}
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b') center/cover no-repeat;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      color: black;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: black;
+    }
+
+    .btn {
+      padding: 15px 30px;
+      background-color: #ff0000;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    .planos .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #222;
+      padding: 20px;
+      border-radius: 10px;
+      flex: 1;
+      max-width: 300px;
+    }
+
+    .destaque {
+      border: 2px solid #ff0000;
+    }
+
+    .card h4 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #ff0000;
+    }
+
+    .card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .card ul li {
+      margin-bottom: 10px;
+    }
+
+    .galeria .imagens {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .galeria img {
+      border-radius: 5px;
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .depoimentos blockquote {
+      background-color: #1c1c1c;
+      padding: 15px;
+      margin: 10px auto;
+      border-left: 5px solid #ff0000;
+      max-width: 600px;
+    }
+
+    .contato form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .contato input, .contato textarea {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .contato button {
+      padding: 10px;
+      background-color: #ff0000;
+      color: #fff;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    footer {
+      background-color: #000;
+      text-align: center;
+      padding: 20px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>PowerFit</h1>
+      <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#planos">Planos</a>
+        <a href="#depoimentos">Depoimentos</a>
+      </nav><br/>
+    </div>
+	<div class="login">
+		<button type="button"><a href="login">Login</a></button>
+	</div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Corpo forte, mente sã</h2>
+      <p>Treine na melhor academia da cidade com estrutura completa e acompanhamento profissional.</p>
+      <a href="#planos" class="btn">Veja nossos planos</a>
+    </div>
+  </section>
+
+  <section id="sobre" class="container">
+    <h3>Sobre nós</h3>
+    <p>A PowerFit oferece um ambiente motivador com equipamentos modernos, aulas variadas e profissionais qualificados. Nosso objetivo é transformar sua rotina com saúde e performance.</p>
+  </section>
+
+  <section id="planos" class="planos container">
+    <h3>Planos</h3>
+    <div class="cards">
+      <div class="card">
+        <h4>Mensal</h4>
+        <p>R$ 99,90</p>
+        <ul>
+          <li>Acesso livre à academia</li>
+          <li>Acompanhamento inicial</li>
+          <li>Aulas em grupo</li>
+        </ul>
+      </div>
+      <div class="card destaque">
+        <h4>Trimestral</h4>
+        <p>R$ 270,00</p>
+        <ul>
+          <li>Tudo do plano mensal</li>
+          <li>Acompanhamento contínuo</li>
+          <li>2 convidados por mês</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>Anual</h4>
+        <p>R$ 899,00</p>
+        <ul>
+          <li>Todos os benefícios</li>
+          <li>Brinde exclusivo</li>
+          <li>Personal incluso 1x por semana</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  
+
+  <section id="depoimentos" class="depoimentos container">
+    <h3>O que dizem nossos alunos</h3>
+    <div class="comentarios">
+      <blockquote>"Melhor academia! Estrutura top e atendimento incrível!" – João M.</blockquote>
+      <blockquote>"Voltei a treinar com motivação! Equipe maravilhosa!" – Carla F.</blockquote>
+    </div>
+  </section>
+
+
+  <footer>
+    <p>&copy; 2025 PowerFit | Projeto Faculdade 💪</p>
+  </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Área do Usuário | PowerFit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background-color: #111;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #000;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      color: #ff0000;
+      font-size: 2rem;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    nav a:hover {
+      color: #ff0000;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .perfil {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .perfil img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 3px solid #ff0000;
+      margin-bottom: 20px;
+    }
+
+    .perfil h2 {
+      font-size: 2rem;
+      color: #fff;
+    }
+
+    .perfil p {
+      font-size: 1.1rem;
+      color: #ddd;
+    }
+
+    .planos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #222;
+      padding: 20px;
+      border-radius: 10px;
+      flex: 1;
+      max-width: 300px;
+    }
+
+    .card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #ff0000;
+    }
+
+    .card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .card ul li {
+      margin-bottom: 10px;
+    }
+
+    .treinos {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .treinos h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .treino-card {
+      background-color: #333;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .treino-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #ff0000;
+    }
+
+    .btn {
+      padding: 15px 30px;
+      background-color: #ff0000;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.2);
+      transform: skewX(-45deg);
+      transition: all 0.5s ease;
+      z-index: 0;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #ff0000aa;
+    }
+
+    .btn:hover::before {
+      left: 120%;
+    }
+
+    footer {
+      background-color: #000;
+      text-align: center;
+      padding: 20px;
+      color: #aaa;
+      margin-top: 40px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>PowerFit</h1>
+    <nav>
+      <a href="#perfil">Perfil</a>
+      <a href="#planos">Planos</a>
+      <a href="#treinos">Meus Treinos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <!-- Seção Perfil -->
+    <section id="perfil" class="perfil">
+      <img src="fotoperfil.png" alt = "Foto de perfil">
+      <h2> Bem - Vindo (a) </h2>
+      <p>Idade: 24 anos | Objetivo: Ganho de massa muscular</p>
+    </section>
+
+    <!-- Seção Planos -->
+    <section id="planos">
+      <h3>Planos de Treinamento</h3>
+      <div class="planos">
+        <div class="card">
+          <h3>Plano Inicial</h3>
+          <ul>
+            <li>Treinos 3x por semana</li>
+            <li>Aulas em grupo</li>
+            <li>Acompanhamento mensal</li>
+          </ul>
+          <a href="#" class="btn">Escolher</a>
+        </div>
+        <div class="card">
+          <h3>Plano Avançado</h3>
+          <ul>
+            <li>Treinos 5x por semana</li>
+            <li>Personal Trainer</li>
+            <li>Acompanhamento semanal</li>
+          </ul>
+          <a href="#" class="btn">Escolher</a>
+        </div>
+        <div class="card">
+          <h3>Plano Premium</h3>
+          <ul>
+            <li>Treinos diários</li>
+            <li>Acompanhamento personalizado</li>
+            <li>Suplementação recomendada</li>
+          </ul>
+          <a href="#" class="btn">Escolher</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Meus Treinos -->
+    <section id="treinos" class="treinos">
+      <h3>Meus Treinos Recentes</h3>
+      <div class="treino-card">
+        <h4>Treino de Peito e Tríceps</h4>
+        <p>Realizado em 23/04/2025 | Duração: 1h30m</p></br>
+        <a href="#" class="btn">Ver Detalhes</a>
+      </div>
+      <div class="treino-card">
+        <h4>Treino de Perna</h4>
+        <p>Realizado em 20/04/2025 | Duração: 1h15m</p> </br>
+        <a href="#" class="btn">Ver Detalhes</a>
+      </div>
+      <div class="treino-card">
+        <h4>Treino de Costas e Bíceps</h4>
+        <p>Realizado em 17/04/2025 | Duração: 1h00m</p> </br>
+        <a href="#" class="btn">Ver Detalhes</a>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 PowerFit | Todos os direitos reservados</p>
+    <p>Nos siga nas redes sociais: 
+      <a href="#" style="color: #ff0000;">Instagram</a> |
+      <a href="#" style="color: #ff0000;">Facebook</a>
+    </p>
+  </footer>
+
+</body>
+</html>
