@@ -27,7 +27,7 @@
 
     header {
       background-color: #000;
-      padding: 20px 20px;
+      padding: 20px 10px;
       display: flex;
       justify-content: space-between;
 	  text-align: center;
@@ -52,12 +52,13 @@
     }
 	
 	.login button{
-		padding: 10px 10px;
+		padding: 10px 20px 10px 20px;
+		font-family: 'Montserrat', sans-serif;
 		font-size: 25px;
 		background-color: white;
 		color: #ff0000;
 		text-decoration: none;
-		border-radius: 20px;
+		border-radius: 5px;
 	}
 
     .hero {
@@ -71,13 +72,22 @@
     .hero h2 {
       font-size: 3rem;
       color: black;
-      margin-bottom: 20px;
+	  background-color: white; 
+	  border-radius:12px; 
+	  padding:4px 4px; 
+	  margin-left: 20%; margin-right: 20%;
+	  
     }
 
     .hero p {
       font-size: 1.2rem;
       margin-bottom: 30px;
       color: black;
+	  margin-top: 2%;
+	  background-color: white; 
+	  border-radius:10px; 
+	  padding:2px 2px; 
+	  
     }
 
     .btn {
@@ -88,6 +98,22 @@
       font-weight: bold;
       border-radius: 5px;
     }
+	.comprar {
+	  padding: 15px 30px;
+	  background-color: #111111;
+	  color: #fff;
+	  text-decoration: none;
+	  font-weight: bold;
+	  border-radius: 5px;
+	 }
+	  .comprar2 {
+	  	padding: 15px 30px;
+	  	background-color: rgb(255, 0, 0);
+	  	color: #fff;
+	  	text-decoration: none;
+	  	font-weight: bold;
+	 	border-radius: 5px;
+	 }
 
     .planos .cards {
       display: flex;
@@ -213,7 +239,8 @@
         <ul>
           <li>Acesso livre à academia</li>
           <li>Acompanhamento inicial</li>
-          <li>Aulas em grupo</li>
+          <li>Aulas em grupo</li></br>
+		  <a href="\cadastro" class="comprar">Comprar Mensal</a>
         </ul>
       </div>
       <div class="card destaque">
@@ -222,7 +249,8 @@
         <ul>
           <li>Tudo do plano mensal</li>
           <li>Acompanhamento contínuo</li>
-          <li>2 convidados por mês</li>
+          <li>2 convidados por mês</li></br>
+		  <a href="\cadastro" class="comprar2">Comprar Trimestral</a>
         </ul>
       </div>
       <div class="card">
@@ -231,7 +259,8 @@
         <ul>
           <li>Todos os benefícios</li>
           <li>Brinde exclusivo</li>
-          <li>Personal incluso 1x por semana</li>
+          <li>Personal incluso 1x por semana</li></br>
+		  <a href="\cadastro" class="comprar">Comprar Anual</a>
         </ul>
       </div>
     </div>

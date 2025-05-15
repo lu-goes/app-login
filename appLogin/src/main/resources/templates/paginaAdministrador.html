@@ -117,6 +117,7 @@
       z-index: 1;
       display: inline-block;
       margin-right: 10px;
+      cursor: pointer;
     }
 
     .btn::before {
@@ -155,10 +156,9 @@
   <header>
     <h1>PowerFit - Admin</h1>
     <nav>
-      <a href="#dashboard">Dashboard</a>
       <a href="#usuarios">Usuários</a>
       <a href="#planos">Planos</a>
-      <a href="#logout">Sair</a>
+      <a href="\ ">Sair</a>
     </nav>
   </header>
 
@@ -196,21 +196,30 @@
         </thead>
         <tbody>
           <tr>
-            <td>Luisa Silva</td>
-            <td>luisa@email.com</td>
+            <td>Luiza</td>
+            <td>luiza@gmail.com</td>
             <td>Premium</td>
             <td>
-              <a href="#" class="btn">Editar</a>
-              <a href="#" class="btn">Remover</a>
+              <a href="#" class="btn btn-editar">Editar</a>
+              <a href="#" class="btn btn-remover">Remover</a>
             </td>
           </tr>
           <tr>
-            <td>João Mendes</td>
-            <td>joao@email.com</td>
+            <td>Amanda</td>
+            <td>amanda@gmail.com</td>
+            <td>Inicial</td>
+            <td>
+              <a href="#" class="btn btn-editar">Editar</a>
+              <a href="#" class="btn btn-remover">Remover</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Bia</td>
+            <td>bia@gmail.com</td>
             <td>Avançado</td>
             <td>
-              <a href="#" class="btn">Editar</a>
-              <a href="#" class="btn">Remover</a>
+              <a href="#" class="btn btn-editar">Editar</a>
+              <a href="#" class="btn btn-remover">Remover</a>
             </td>
           </tr>
         </tbody>
@@ -262,6 +271,53 @@
   <footer>
     <p>&copy; 2025 PowerFit | Sistema do Administrador</p>
   </footer>
+
+  <!-- Script para edição e remoção no frontend -->
+  <script>
+    function editarLinha(botao) {
+      const linha = botao.closest('tr');
+      const colunas = linha.querySelectorAll('td');
+
+      if (botao.textContent === "Salvar") {
+        colunas.forEach((coluna, index) => {
+          if (index < 3) {
+            const input = coluna.querySelector('input');
+            if (input) coluna.textContent = input.value;
+          }
+        });
+        botao.textContent = "Editar";
+      } else {
+        colunas.forEach((coluna, index) => {
+          if (index < 3) {
+            const textoAtual = coluna.textContent;
+            coluna.innerHTML = `<input type="text" value="${textoAtual}" style="width: 90%; padding: 5px;" />`;
+          }
+        });
+        botao.textContent = "Salvar";
+      }
+    }
+
+    function removerLinha(botao) {
+      const linha = botao.closest('tr');
+      linha.remove();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.btn-editar').forEach(botao => {
+        botao.addEventListener('click', (e) => {
+          e.preventDefault();
+          editarLinha(botao);
+        });
+      });
+
+      document.querySelectorAll('.btn-remover').forEach(botao => {
+        botao.addEventListener('click', (e) => {
+          e.preventDefault();
+          removerLinha(botao);
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>
